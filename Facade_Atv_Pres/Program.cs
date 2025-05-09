@@ -2,27 +2,28 @@
 //Console.WriteLine("Hello, World!");
 //Console.WriteLine("Hello World!");
 using System;
+using System.ComponentModel.DataAnnotations;
 
-    public class Program
+public class Program
     {
         public static void Main(string[] args)
         {
-            // Facade objesi
+            // Facade object
 
-            Kredi kredi = new Kredi();
+            Loan loan = new Loan();
 
-            // Kredi Onayı Sorgusu
+            // Loan Approval Inquiry
 
-            Musteri musteri = new Musteri("Baha Demircioğlu");
-            bool uygun = kredi.UygunMu(musteri, 125000);
+            Console.WriteLine("Write the Customer Name Below:");
+            string CustomerName = Console.ReadLine();
+            Customer customer = new Customer(CustomerName);
+            bool eligible = loan.IsEligible(customer, 125000);
 
-            Console.WriteLine("\n" + musteri.Name +
-                    "'nun kredi istegi " + (uygun ? "onaylandı!" : "reddedildi!"));
+            Console.WriteLine("\n" + customer.Name +
+                    "'s loan request has been " + (eligible ? "approved!" : "rejected!"));
 
-            // Uygulamayı hemen bitirmeme satırı:
+            // Line to prevent the application from closing immediately:
 
             Console.ReadKey();
         }
     }
-
-    
