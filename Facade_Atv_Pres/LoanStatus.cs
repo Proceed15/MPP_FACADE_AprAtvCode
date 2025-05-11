@@ -4,7 +4,7 @@ public class LoanStatus
 {
 public bool IsLoanStatusGood(Customer c)
 {
-Console.WriteLine("Checking " + c.Name + "'s current loans.");
+Console.WriteLine("Checando a Situação Corrente da Conta de " + c.Name + " para Conseguir o Empréstimo...");
 return true;
 }
 }

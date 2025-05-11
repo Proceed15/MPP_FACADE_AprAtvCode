@@ -3,26 +3,39 @@
 //Console.WriteLine("Hello World!");
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 public class Program
     {
         public static void Main(string[] args)
         {
-            // Facade object
-
+            // Facade, objeto
             Loan loan = new Loan();
-
-            // Loan Approval Inquiry
-
-            Console.WriteLine("Write the Customer Name Below:");
-            string CustomerName = Console.ReadLine();
+            string CustomerName = "Bob";
+            string EmailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            // Perguntas para o Empréstimo
+            Boolean Nome = false;
+            do{
+            Console.WriteLine("Escreva o Nome ou Email desse Cliente:");
+            CustomerName = Console.ReadLine();
+            if (Regex.IsMatch(CustomerName, EmailPattern))
+            {
+                Console.WriteLine("Endereço de Email Válido");
+                Nome = true;
+            }
+            else
+            {
+                Console.WriteLine("Endereço de Email Inválido");
+                Nome = false;
+            }
+            } while (Nome = false);
             Customer customer = new Customer(CustomerName);
             bool eligible = loan.IsEligible(customer, 125000);
 
-            Console.WriteLine("\n" + customer.Name +
-                    "'s loan request has been " + (eligible ? "approved!" : "rejected!"));
+            Console.WriteLine("\nA Requisição de Empréstimo para " + customer.Name +
+                    " Foi " + (eligible ? "Aprovada" : "Negada") + "!");
 
-            // Line to prevent the application from closing immediately:
+            //Linha para manter o Console Aberto
 
             Console.ReadKey();
         }

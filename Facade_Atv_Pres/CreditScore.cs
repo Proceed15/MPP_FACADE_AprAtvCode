@@ -1,10 +1,10 @@
-/// 2nd Subclass
+/// Segundo Subsistema
 
 public class CreditScore
 {
     public bool IsCreditScoreGood(Customer c)
     {
-        Console.WriteLine("Checking " + c.Name + "'s credit score.");
+        Console.WriteLine("Checando o Crédito Atual de " + c.Name + " para Conseguir o Empréstimo...");
         return true;
     }
 }

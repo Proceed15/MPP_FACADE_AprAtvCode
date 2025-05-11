@@ -1,10 +1,10 @@
-/// Customer Class
+/// Classe para o Cliente
 
 public class Customer
 {
     private string name;
 
-    // Constructor
+    // Construtor
 
     public Customer(string name)
     {

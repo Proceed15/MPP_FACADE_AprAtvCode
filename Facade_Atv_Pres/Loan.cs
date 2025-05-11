@@ -1,4 +1,4 @@
-/// Facade (Upper) Class
+/// Facade, classe para verificar o empréstimo
 
 public class Loan
 {
@@ -8,12 +8,12 @@ public class Loan
 
     public bool IsEligible(Customer customer, int amount)
     {
-        Console.WriteLine("\n{0} has applied for a loan up to {1}. Checks will be performed, and the application will be concluded:\n",
+        Console.WriteLine("\n{0} está tentando Conseguir um Empréstimo de {1} Euros. Checagens serão Realizadas, e a Aplicação será Concluída:\n",
         customer.Name, amount);
 
         bool eligible = true;
 
-        // Perform loan checks and decide whether the customer can get a loan based on this:
+        // Performando as checagens de Empréstimo e decidindo se o cliente pode conseguir um empréstimo com base nas análises a seguir:
 
         if (!accountInfo.HasSufficientSavings(customer, amount))
         {
