@@ -4,7 +4,7 @@ public class CreditScore
 {
     public bool IsCreditScoreGood(Customer c)
     {
-        Console.WriteLine("Checando o Crédito Atual de " + c.Name + " para Conseguir o Empréstimo...");
+        Console.WriteLine("Checando o Crédito Corrente de " + c.Name + " para Conseguir o Empréstimo...");
         return true;
     }
 }

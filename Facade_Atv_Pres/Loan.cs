@@ -8,6 +8,7 @@ public class Loan
 
     public bool IsEligible(Customer customer, int amount)
     {
+        //Substituí o {0] pelo valor
         Console.WriteLine("\n{0} está tentando Conseguir um Empréstimo de {1} Euros. Checagens serão Realizadas, e a Aplicação será Concluída:\n",
         customer.Name, amount);
 
