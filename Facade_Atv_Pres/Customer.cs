@@ -4,7 +4,7 @@ public class Customer
 {
     private string name;
 
-    // Construtor
+    // Construtor para repassar os dados do Cliente
 
     public Customer(string name)
     {

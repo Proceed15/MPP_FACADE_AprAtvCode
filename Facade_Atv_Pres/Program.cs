@@ -13,19 +13,19 @@ public class Program
             Loan loan = new Loan();
             string CustomerName = "Bob";
             string EmailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            // Perguntas para o Empréstimo
+            // Critérios para o Empréstimo
             Boolean IsInEmailPattern = false;
             do{
-                Console.WriteLine("\nEscreva o Email desse Cliente:");
+                Console.WriteLine("\nEscreva o Email da conta desse Cliente:");
                 CustomerName = Console.ReadLine();
                 if (Regex.IsMatch(CustomerName, EmailPattern))
                 {
-                    Console.WriteLine("\nEndereço de Email Válido");
+                    Console.WriteLine("\nEndereço de Email Válido Informado, Prosseguindo com a Avaliação de Empréstimo...");
                     IsInEmailPattern = true;
                 }
                 else
                 {
-                    Console.WriteLine("\nEndereço de Email Inválido");
+                    Console.WriteLine("\nEndereço de Email Inválido, Informe um Novo Endereço de Email...");
                     IsInEmailPattern = false;
                 }
             } while (!IsInEmailPattern);

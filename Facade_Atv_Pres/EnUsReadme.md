@@ -30,7 +30,7 @@ The `Loan` Facade hides the complexity of these checks from the client code.
 ## Example Usage
 ```csharp
 // Program.cs
-Customer Customer = new Customer("Baha Demircioğlu");
+Customer Customer = new Customer("jose@hotmail.com");
 Loan loan = new Loan();
 bool eligible = loan.IsEligible(Customer, 125000);
 
