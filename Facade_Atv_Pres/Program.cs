@@ -4,7 +4,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
-
+// Classe para gerenciar o uso do Usuário a Interface Loan
+// Apresentado em 19/05/2025 a partir das 13 até as 14 horas
 public class Program
     {
         public static void Main(string[] args)
